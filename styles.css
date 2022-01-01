@@ -1,0 +1,28 @@
+:root {
+  --color-primary: hsl(31, 77%, 52%);
+  --color-secondary: hsl(184, 100%, 22%);
+  --color-tertiary: hsl(179, 100%, 13%);
+  --color-accent: hsl(0, 0%, 95%);
+  --color-paragraph: hsla(0, 0%, 100%, 0.75);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+}
+
+h3 {
+  font-family: "Big Shoulders Display", cursive;
+  color: var(--color-accent);
+  text-transform: uppercase;
+}
+
+p {
+  font-family: "Lexend Deca", sans-serif;
+  color: var(--color-paragraph);
+}
