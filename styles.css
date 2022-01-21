@@ -1,0 +1,140 @@
+:root {
+  --color-primary: hsl(31, 77%, 52%);
+  --color-secondary: hsl(184, 100%, 22%);
+  --color-tertiary: hsl(179, 100%, 13%);
+  --color-accent: hsl(0, 0%, 95%);
+  --color-paragraph: hsla(0, 0%, 100%, 0.75);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    height: 90vh;
+  }
+}
+
+/* Typography */
+body {
+  font-size: 15px;
+  background-color: var(--color-accent);
+}
+
+h3 {
+  font-family: "Big Shoulders Display", cursive;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  font-size: 1.8rem;
+}
+
+p {
+  font-family: "Lexend Deca", sans-serif;
+  color: var(--color-paragraph);
+  line-height: 1.5rem;
+  font-size: 0.9rem;
+}
+
+/* Buttons */
+.button {
+  padding-top: 1.2rem;
+}
+
+.btn {
+  font-size: 1rem;
+  text-transform: capitalize;
+  padding: 0.8rem 2.2rem;
+  border: 0;
+  border-radius: 30px;
+  background-color: var(--color-accent);
+}
+
+.btn:hover {
+  border: 1px solid var(--color-accent);
+  color: var(--color-accent);
+}
+
+.btn--primary {
+  color: var(--color-primary);
+}
+
+.btn--primary:hover {
+  background-color: var(--color-primary);
+}
+
+.btn--secondary {
+  color: var(--color-secondary);
+}
+
+.btn--secondary:hover {
+  background-color: var(--color-secondary);
+}
+
+.btn--tertiary {
+  color: var(--color-tertiary);
+}
+
+.btn--tertiary:hover {
+  background-color: var(--color-tertiary);
+}
+
+@media screen and (min-width: 1024px) {
+  .button {
+    padding-top: 4rem;
+  }
+}
+
+/* Grid */
+.grid {
+  display: grid;
+}
+
+.box {
+  height: auto;
+  width: 320px;
+  padding: 2rem;
+}
+
+.box-primary {
+  background-color: var(--color-primary);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.box-secondary {
+  background-color: var(--color-secondary);
+}
+
+.box-tertiary {
+  background-color: var(--color-tertiary);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+  .grid-1x3 {
+    grid-template-columns: repeat(3, 320px);
+  }
+
+  .box-primary {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 10px;
+  }
+
+  .box-tertiary {
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 10px;
+  }
+}
